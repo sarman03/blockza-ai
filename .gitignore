@@ -1,0 +1,33 @@
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+myenv
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and temporary files
+*.log
+tmp/
+*.sqlite3 # For SQLite databases if used
+
+# Environment variables
+.env
+instance/ # Flask's instance folder often contains sensitive config
+
+# Uploaded files and user-generated content (if applicable)
+uploads/
+media/
