@@ -72,7 +72,7 @@ class DirectoryRAGSystem:
         # Initialize Anthropic Claude
         self.llm = ChatAnthropic(
             api_key=self.anthropic_api_key,
-            model="claude-3-opus-20240229",  # Latest stable model
+            model="claude-3-5-sonnet-20240620",  # Latest stable model
             temperature=0.1,
             max_tokens=2000
         )
