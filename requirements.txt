@@ -1,12 +1,29 @@
-fastapi
-uvicorn
-langchain
-langchain-anthropic
-langchain-community
-langgraph
-chromadb
-requests
-python-dotenv
-sentence-transformers 
-langchain-huggingface
-openai
+# Core LangChain packages (updated to latest versions)
+langchain==0.3.25
+langchain-community==0.3.25
+langchain-anthropic==0.2.0
+langchain-huggingface==0.1.0
+langgraph==0.2.25
+
+# Vector store and embeddings
+faiss-cpu==1.8.0
+sentence-transformers==3.0.1
+
+# Anthropic API
+anthropic==0.34.0
+
+# Web framework (standardize on FastAPI)
+fastapi==0.115.6
+uvicorn==0.32.1
+pydantic==2.10.4
+
+# Utilities
+requests==2.31.0
+python-dotenv==1.0.0
+beautifulsoup4==4.12.2
+numpy==1.24.3
+pandas==2.0.3
+
+# Optional: For better performance
+torch==2.1.0
+transformers==4.36.0

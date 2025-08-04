@@ -1,6 +1,6 @@
 import chromadb
 from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 def get_vector_store():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")

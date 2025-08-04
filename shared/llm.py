@@ -3,7 +3,8 @@ from config import ANTHROPIC_API_KEY
 
 def get_llm():
     return ChatAnthropic(
-        anthropic_api_key=ANTHROPIC_API_KEY,
-        model="claude-3-5-sonnet-20241022",
-        temperature=0
+        api_key=ANTHROPIC_API_KEY,
+        model="claude-3-opus-20240229",
+        temperature=0.1,
+        max_tokens=2000
     )

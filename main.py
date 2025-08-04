@@ -1,9 +1,20 @@
 from fastapi import FastAPI
-from apis.directory.endpoints import router as directory_router
+from fastapi.middleware.cors import CORSMiddleware
+from apis.directory.router import router as directory_router
 
-app = FastAPI(title="RAG + LangGraph API")
+app = FastAPI(title="RAG + LangGraph API", version="1.0.0")
 
-app.include_router(directory_router, prefix="/directory", tags=["directory"])
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include the directory router
+app.include_router(directory_router)
 
 if __name__ == "__main__":
     import uvicorn
